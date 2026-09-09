@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gopal Kumar | Frontend Web Developer Portfolio</title>
+  <title>Gopal Kumar | Frontend Web Developer</title>
 
   <!-- SEO & Meta Tags -->
   <meta name="description" content="Official developer portfolio of Gopal Kumar - Frontend Web Developer specializing in HTML5, CSS3, JavaScript, and responsive web design. Explore projects, skills, and contact information." />
@@ -11,12 +11,12 @@
   <meta name="author" content="Gopal Kumar" />
 
   <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="Gopal Kumar | Frontend Web Developer Portfolio" />
+  <meta property="og:title" content="Gopal Kumar | Frontend Web Developer" />
   <meta property="og:description" content="Crafting Beautiful, Responsive & User-Focused Websites with clean code and modern animations." />
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50%' y='65%' font-family='sans-serif' font-weight='bold' font-size='50' fill='white' text-anchor='middle'>GK</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
@@ -58,17 +58,17 @@
      ========================================================================== -->
   <header class="navbar">
     <div class="container navbar-container">
-      <a href="#hero" class="logo">
+      <a href="#home" class="logo">
         <div class="logo-badge">GK</div>
         <div class="logo-text">Gopal<span>Kumar</span></div>
       </a>
 
       <nav>
         <ul class="nav-menu">
-          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#home" class="nav-link active">Home</a></li>
           <li><a href="#about" class="nav-link">About</a></li>
           <li><a href="#skills" class="nav-link">Skills</a></li>
-          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#resume" class="nav-link">Resume</a></li>
           <li><a href="#projects" class="nav-link">Projects</a></li>
           <li><a href="#services" class="nav-link">Services</a></li>
           <li><a href="#why-hire-me" class="nav-link">Why Hire Me</a></li>
@@ -102,10 +102,10 @@
   <div class="mobile-nav-overlay"></div>
   <aside class="mobile-nav">
     <ul class="mobile-nav-menu">
-      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#home" class="mobile-nav-link">Home</a></li>
       <li><a href="#about" class="mobile-nav-link">About</a></li>
       <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
-      <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#resume" class="mobile-nav-link">Resume</a></li>
       <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
       <li><a href="#services" class="mobile-nav-link">Services</a></li>
       <li><a href="#why-hire-me" class="mobile-nav-link">Why Hire Me</a></li>
@@ -120,9 +120,10 @@
   </aside>
 
   <!-- ==========================================================================
-     HERO SECTION
+     HERO / HOME SECTION
      ========================================================================== -->
-  <section id="hero" class="hero">
+  <section id="home" class="hero">
+    <div id="hero"></div>
     <canvas id="hero-canvas"></canvas>
     
     <div class="container hero-content">
@@ -1107,9 +1108,10 @@
   </section>
 
   <!-- ==========================================================================
-     EXPERIENCE SECTION
+     RESUME / EXPERIENCE SECTION
      ========================================================================== -->
-  <section id="experience" class="section reveal">
+  <section id="resume" class="section reveal">
+    <div id="experience"></div>
     <div class="container">
       <div class="section-header">
         <div class="section-tag">
@@ -1624,9 +1626,10 @@
       <div class="footer-top">
         <div class="footer-logo">Gopal<span>Kumar</span></div>
         <ul class="footer-nav">
-          <li><a href="#hero">Home</a></li>
+          <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
+          <li><a href="#resume">Resume</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#services">Services</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -1678,6 +1681,6 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
   <!-- Main JavaScript File -->
-  <script src="/script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
