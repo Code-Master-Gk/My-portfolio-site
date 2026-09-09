@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gopal Kumar | Frontend Web Developer Portfolio</title>
+
+  <!-- SEO & Meta Tags -->
+  <meta name="description" content="Official developer portfolio of Gopal Kumar - Frontend Web Developer specializing in HTML5, CSS3, JavaScript, and responsive web design. Explore projects, skills, and contact information." />
+  <meta name="keywords" content="Gopal Kumar, Frontend Developer, Web Developer, HTML, CSS, JavaScript, Portfolio, Responsive Web Design, Python, Django" />
+  <meta name="author" content="Gopal Kumar" />
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Gopal Kumar | Frontend Web Developer Portfolio" />
+  <meta property="og:description" content="Crafting Beautiful, Responsive & User-Focused Websites with clean code and modern animations." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%232563eb'/><text x='50%' y='65%' font-family='sans-serif' font-weight='bold' font-size='50' fill='white' text-anchor='middle'>GK</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Custom Cursor & Glow Trail -->
+  <div class="cursor-dot"></div>
+  <div class="cursor-blur"></div>
+
+  <!-- Preloader Screen -->
+  <div id="preloader">
+    <div class="preloader-content">
+      <div class="loader-logo">GK<span>.</span></div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+      <div class="loader-text">Loading Experience...</div>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress-container">
+    <div class="scroll-progress-bar"></div>
+  </div>
+
+  <!-- Ambient Immersive UI Background Glows -->
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-bottom-left"></div>
+  <div class="ambient-glow glow-center"></div>
+
+  <!-- ==========================================================================
+     HEADER / NAVIGATION BAR
+     ========================================================================== -->
+  <header class="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="logo">
+        <div class="logo-badge">GK</div>
+        <div class="logo-text">Gopal<span>Kumar</span></div>
+      </a>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#services" class="nav-link">Services</a></li>
+          <li><a href="#why-hire-me" class="nav-link">Why Hire Me</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+          <span id="theme-icon"></span>
+        </button>
+
+        <!-- Resume Download CTA -->
+        <a href="#" class="btn-resume-nav download-resume-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Resume
+        </a>
+
+        <!-- Mobile Hamburger -->
+        <button class="hamburger" aria-label="Open Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="mobile-nav-overlay"></div>
+  <aside class="mobile-nav">
+    <ul class="mobile-nav-menu">
+      <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+      <li><a href="#about" class="mobile-nav-link">About</a></li>
+      <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+      <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+      <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+      <li><a href="#services" class="mobile-nav-link">Services</a></li>
+      <li><a href="#why-hire-me" class="mobile-nav-link">Why Hire Me</a></li>
+      <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto;">
+      <a href="#" class="btn-primary download-resume-btn" style="width: 100%; justify-content: center;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download Resume
+      </a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+     HERO SECTION
+     ========================================================================== -->
+  <section id="hero" class="hero">
+    <canvas id="hero-canvas"></canvas>
+    
+    <div class="container hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          Available for Freelance & Hiring
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Gopal Kumar</span>
+        </h1>
+
+        <div class="hero-subtitle">
+          I am a <span class="typed-wrapper"><span id="typed-text"></span><span class="typed-cursor">|</span></span>
+        </div>
+
+        <p class="hero-description">
+          Crafting Beautiful, Responsive & User-Focused Websites. I specialize in turning complex ideas into clean, fast, and interactive web experiences.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#" class="btn-primary download-resume-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            Download Resume
+          </a>
+          <a href="#projects" class="btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            View Projects
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <span>Connect:</span>
+          <a href="https://github.com/gopalkumahto3" target="_blank" class="social-icon-btn" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          </a>
+          <a href="https://linkedin.com" target="_blank" class="social-icon-btn" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="mailto:gopalkumahto3@gmail.com" class="social-icon-btn" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="hero-avatar-wrapper">
+          <div class="avatar-glow-ring"></div>
+          
+          <div class="avatar-card">
+            <div class="avatar-img-container">
+              <!-- Custom Developer Avatar Illustration -->
+              <svg class="avatar-svg-placeholder" viewBox="0 0 300 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="300" height="360" fill="#0F172A"/>
+                <circle cx="150" cy="130" r="60" fill="#2563EB" opacity="0.3"/>
+                <!-- Avatar Silhouette Graphics -->
+                <circle cx="150" cy="120" r="45" fill="#38BDF8"/>
+                <path d="M80 280C80 210 110 190 150 190C190 190 220 210 220 280V320H80V280Z" fill="#1E293B"/>
+                <path d="M100 280C100 230 120 210 150 210C180 210 200 230 200 280V320H100V280Z" fill="#2563EB"/>
+                <!-- Code Elements overlay -->
+                <rect x="50" y="240" width="200" height="90" rx="12" fill="rgba(15, 23, 42, 0.85)" stroke="rgba(56, 189, 248, 0.4)" stroke-width="2"/>
+                <text x="70" y="270" font-family="monospace" font-size="14" fill="#38BDF8">&lt;code&gt;</text>
+                <text x="90" y="292" font-family="monospace" font-size="13" fill="#E2E8F0">const dev = "Gopal";</text>
+                <text x="70" y="315" font-family="monospace" font-size="14" fill="#38BDF8">&lt;/code&gt;</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Floating Tech Badges -->
+          <div class="floating-badge badge-1">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#e34f26" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            HTML5
+          </div>
+          <div class="floating-badge badge-2">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1572b6" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            CSS3
+          </div>
+          <div class="floating-badge badge-3">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f7df1e" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            JavaScript
+          </div>
+          <div class="floating-badge badge-4">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3776ab" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M6 12h12"/></svg>
+            Python
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     ABOUT SECTION
+     ========================================================================== -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          Discover Story
+        </div>
+        <h2 class="section-title">About <span class="gradient-text">Gopal Kumar</span></h2>
+        <p class="section-subtitle">A passionate web developer who turns ideas into clean code and interactive web experiences.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card-left">
+          <h3 style="font-size: 1.5rem; font-family: var(--font-heading); margin-bottom: 1rem;">Frontend Developer & Tech Explorer</h3>
+          <p class="about-text">
+            I am a passionate Frontend Web Developer specializing in HTML, CSS, JavaScript, and responsive web design. I enjoy transforming ideas into elegant, fast, and interactive websites with a strong focus on user experience.
+          </p>
+          <p class="about-text">
+            I have completed a Web Development Internship and continue expanding my skills in Python and Django while building real-world projects and improving my communication skills for freelancing and professional opportunities.
+          </p>
+
+          <div class="about-stats-mini">
+            <div class="stat-mini-card">
+              <div class="stat-mini-num">1+</div>
+              <div class="stat-mini-label">Years Experience</div>
+            </div>
+            <div class="stat-mini-card">
+              <div class="stat-mini-num">15+</div>
+              <div class="stat-mini-label">Projects Built</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-card-right">
+          <div class="about-tabs">
+            <button class="tab-btn active" data-tab="tab-story">Short Story</button>
+            <button class="tab-btn" data-tab="tab-education">Education</button>
+            <button class="tab-btn" data-tab="tab-strengths">Strengths</button>
+          </div>
+
+          <div id="tab-story" class="tab-pane active">
+            <p class="about-text">
+              My journey into programming began with a deep curiosity about how modern websites function behind the scenes. From writing my first line of HTML to architecting complete responsive web layouts, I fell in love with front-end engineering.
+            </p>
+            <p class="about-text">
+              Today, I focus on crafting user-centered interfaces with fluid animations, intuitive component architecture, and clean code standards.
+            </p>
+          </div>
+
+          <div id="tab-education" class="tab-pane">
+            <div style="display: flex; flex-direction: column; gap: 1rem;">
+              <div style="background: var(--bg-alt); padding: 1rem; border-radius: 10px;">
+                <h4 style="font-weight: 700;">Web Development Internship</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Completed Intensive Practical Internship</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Worked on responsive web designs, front-end optimization, and real-world project workflows.</p>
+              </div>
+              <div style="background: var(--bg-alt); padding: 1rem; border-radius: 10px;">
+                <h4 style="font-weight: 700;">Full Stack Skill Expansion</h4>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Self-Driven Learning & Python/Django</p>
+                <p style="font-size: 0.85rem; margin-top: 0.5rem;">Expanding backend capabilities with Python and Django to become a complete Full Stack Developer.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="tab-strengths" class="tab-pane">
+            <div class="strengths-grid">
+              <div class="strength-item">
+                <span class="strength-icon">✓</span> Clean Code Practices
+              </div>
+              <div class="strength-item">
+                <span class="strength-icon">✓</span> Responsive Design
+              </div>
+              <div class="strength-item">
+                <span class="strength-icon">✓</span> Problem Solving
+              </div>
+              <div class="strength-item">
+                <span class="strength-icon">✓</span> Continuous Learning
+              </div>
+              <div class="strength-item">
+                <span class="strength-icon">✓</span> UI/UX Precision
+              </div>
+              <div class="strength-item">
+                <span class="strength-icon">✓</span> Communication
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     SKILLS SECTION
+     ========================================================================== -->
+  <section id="skills" class="section skills-section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          Technical Mastery
+        </div>
+        <h2 class="section-title">Skills & <span class="gradient-text">Expertise</span></h2>
+        <p class="section-subtitle">Comprehensive overview of technologies, frameworks, design tools, and development workflows I specialize in.</p>
+      </div>
+
+      <div class="skills-container">
+        <!-- Filter Category Tabs -->
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            All Skills (20)
+          </button>
+          <button class="filter-btn" data-filter="frontend">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            Frontend
+          </button>
+          <button class="filter-btn" data-filter="backend">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            Backend
+          </button>
+          <button class="filter-btn" data-filter="cms">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            CMS & Web
+          </button>
+          <button class="filter-btn" data-filter="design">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.58 7.58"/><circle cx="11" cy="11" r="2"/></svg>
+            UI/UX & Design
+          </button>
+          <button class="filter-btn" data-filter="tools">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            Dev Tools
+          </button>
+        </div>
+
+        <!-- Skills Grid -->
+        <div class="skills-grid">
+
+          <!-- ==================== FRONTEND DEVELOPMENT ==================== -->
+          <!-- HTML5 -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-html5">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M4.5 3L5.7 18.5L12 21L18.3 18.5L19.5 3H4.5Z" fill="#E34F26" fill-opacity="0.2" stroke="#E34F26" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M12 5.5V18.8L16.8 17.5L17.7 5.5H12ZM15.8 8.5H12V10.8H15.6L15.3 13.8L12 14.7V12.5" stroke="#F06529" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-expert">Expert</span>
+                <div class="circular-progress" data-level="95">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">95%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">HTML5 & Semantic Markup</h3>
+              <span class="skill-cat-tag">Frontend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="95"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="95">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CSS3 -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-css3">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M4.5 3L5.7 18.5L12 21L18.3 18.5L19.5 3H4.5Z" fill="#1572B6" fill-opacity="0.2" stroke="#1572B6" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M16 5.5H8L8.3 9.5H15.5L15 15.5L12 16.3L9 15.5L8.8 13.2H6.5L6.8 17.5L12 19L17.2 17.5L18 5.5H16Z" fill="#33A9DC"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-advanced">Advanced</span>
+                <div class="circular-progress" data-level="92">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">92%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">CSS3, Flexbox & Grid</h3>
+              <span class="skill-cat-tag">Frontend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="92"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="92">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- JavaScript (ES6+) -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-js">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="3" fill="#F7DF1E" fill-opacity="0.2" stroke="#F7DF1E" stroke-width="1.8"/>
+                  <path d="M11.5 16.2C11.5 17.5 10.4 18.5 8.8 18.5C7.2 18.5 6.2 17.6 5.7 16.3L7.1 15.5C7.4 16.2 8 16.8 8.8 16.8C9.5 16.8 10 16.3 10 15.7V11.5H11.5V16.2ZM18.2 16.3C17.6 17.7 16.3 18.5 14.6 18.5C13 18.5 11.8 17.5 11.8 15.5C11.8 13.2 13.4 12.3 15.1 12.3C16 12.3 16.8 12.6 17.3 13.1L16.2 14.1C15.8 13.8 15.3 13.6 14.7 13.6C13.8 13.6 13.2 14.3 13.2 15.3C13.2 16.3 13.8 17 14.7 17C15.3 17 15.8 16.6 16.3 16L18.2 16.3Z" fill="#F7DF1E"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-advanced">Advanced</span>
+                <div class="circular-progress" data-level="88">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">88%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">JavaScript (ES6+)</h3>
+              <span class="skill-cat-tag">Frontend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="88"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="88">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Angular -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-angular">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2.5L3.5 5.5L4.8 17.5L12 21.5L19.2 17.5L20.5 5.5L12 2.5Z" fill="#DD0031" fill-opacity="0.2" stroke="#DD0031" stroke-width="1.8" stroke-linejoin="round"/>
+                  <path d="M12 4.5L12 18.5L17 15.5L18 6.5L12 4.5Z" fill="#C3002F"/>
+                  <path d="M12 7.5L8.5 15.5H10.2L11 13.8H13L13.8 15.5H15.5L12 7.5ZM11.6 12.4L12 11.2L12.4 12.4H11.6Z" fill="#FFFFFF"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="78">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">78%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Angular</h3>
+              <span class="skill-cat-tag">Frontend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="78"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="78">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- jQuery -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-jquery">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#0769AD" fill-opacity="0.2" stroke="#0769AD" stroke-width="1.8"/>
+                  <path d="M12 6C8.7 6 6 8.7 6 12C6 15.3 8.7 18 12 18C15.3 18 18 15.3 18 12" stroke="#0769AD" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M12 15V9M12 9L15 12M12 9L9 12" stroke="#00B4D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="85">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">85%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">jQuery</h3>
+              <span class="skill-cat-tag">Frontend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="85"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="85">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bootstrap -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-bootstrap">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#7952B3" fill-opacity="0.2" stroke="#7952B3" stroke-width="1.8"/>
+                  <path d="M8.5 6.5H13C14.5 6.5 15.5 7.3 15.5 8.5C15.5 9.5 14.8 10.3 13.8 10.6C15 10.9 16 11.8 16 13.2C16 14.8 14.8 15.5 13 15.5H8.5V6.5ZM11 8.3V10.2H12.8C13.5 10.2 14 9.8 14 9.2C14 8.7 13.5 8.3 12.8 8.3H11ZM11 11.8V13.8H13.2C14 13.8 14.5 13.4 14.5 12.8C14.5 12.2 14 11.8 13.2 11.8H11Z" fill="#7952B3"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-advanced">Advanced</span>
+                <div class="circular-progress" data-level="90">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">90%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Bootstrap</h3>
+              <span class="skill-cat-tag">Frontend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="90"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="90">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- AJAX -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-ajax">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12C4 7.58 7.58 4 12 4C15.3 4 18.15 6.01 19.35 8.87M20 12C20 16.42 16.42 20 12 20C8.7 20 5.85 17.99 4.65 15.13" stroke="#00B4D8" stroke-width="2" stroke-linecap="round"/>
+                  <polyline points="16 9 20 9 20 5" stroke="#00B4D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="8 15 4 15 4 19" stroke="#00B4D8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="12" cy="12" r="2" fill="#00B4D8"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="82">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">82%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">AJAX & Asynchronous JS</h3>
+              <span class="skill-cat-tag">Frontend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="82"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="82">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Responsive Web Design -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-responsive">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <rect x="2" y="3" width="13" height="9" rx="1.5" stroke="#10B981" stroke-width="1.8"/>
+                  <path d="M6 15H11" stroke="#10B981" stroke-width="1.5" stroke-linecap="round"/>
+                  <rect x="13" y="8" width="9" height="13" rx="1.5" stroke="#34D399" stroke-width="1.8" fill="#10B981" fill-opacity="0.15"/>
+                  <line x1="16" y1="18" x2="19" y2="18" stroke="#34D399" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-expert">Expert</span>
+                <div class="circular-progress" data-level="95">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">95%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Responsive Web Design</h3>
+              <span class="skill-cat-tag">Frontend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="95"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="95">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ==================== BACKEND DEVELOPMENT ==================== -->
+          <!-- Python -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-python">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M11.8 2C8.6 2 8.8 3.4 8.8 3.4L8.8 5.1H12.2V5.6H6.8C6.8 5.6 4.5 5.3 4.5 8.6C4.5 11.9 6.5 11.7 6.5 11.7H7.5V10.1C7.5 10.1 7.4 8.3 9.3 8.3H12.6C12.6 8.3 14.3 8.3 14.3 6.6V3.8C14.3 3.8 14.6 2 11.8 2ZM10.2 3.2C10.6 3.2 10.9 3.5 10.9 3.9C10.9 4.3 10.6 4.6 10.2 4.6C9.8 4.6 9.5 4.3 9.5 3.9C9.5 3.5 9.8 3.2 10.2 3.2Z" fill="#3776AB"/>
+                  <path d="M12.2 22C15.4 22 15.2 20.6 15.2 20.6V18.9H11.8V18.4H17.2C17.2 18.4 19.5 18.7 19.5 15.4C19.5 12.1 17.5 12.3 17.5 12.3H16.5V13.9C16.5 13.9 16.6 15.7 14.7 15.7H11.4C11.4 15.7 9.7 15.7 9.7 17.4V20.2C9.7 20.2 9.4 22 12.2 22ZM13.8 20.8C13.4 20.8 13.1 20.5 13.1 20.1C13.1 19.7 13.4 19.4 13.8 19.4C14.2 19.4 14.5 19.7 14.5 20.1C14.5 20.5 14.2 20.8 13.8 20.8Z" fill="#FFD43B"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="80">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">80%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Python</h3>
+              <span class="skill-cat-tag">Backend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="80"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="80">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Django -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-django">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#092E20" fill-opacity="0.25" stroke="#44B78B" stroke-width="1.8"/>
+                  <path d="M15 6V18H12.5V16.3C11.8 17.5 10.5 18.2 9 18.2C6.2 18.2 4.5 15.8 4.5 12C4.5 8.2 6.2 5.8 9 5.8C10.5 5.8 11.8 6.5 12.5 7.7V6H15ZM9.8 8.5C8 8.5 7 10 7 12C7 14 8 15.5 9.8 15.5C11.6 15.5 12.5 14 12.5 12C12.5 10 11.6 8.5 9.8 8.5Z" fill="#44B78B"/>
+                  <path d="M17.5 10V18H16V10H17.5ZM16.8 6.5C17.3 6.5 17.8 7 17.8 7.5C17.8 8 17.3 8.5 16.8 8.5C16.3 8.5 15.8 8 15.8 7.5C15.8 7 16.3 6.5 16.8 6.5Z" fill="#44B78B"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-intermediate">Intermediate</span>
+                <div class="circular-progress" data-level="75">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">75%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Django Framework</h3>
+              <span class="skill-cat-tag">Backend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="75"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="75">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MySQL -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-mysql">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M4 6C4 4.3 7.6 3 12 3C16.4 3 20 4.3 20 6M4 6V18C4 19.7 7.6 21 12 21C16.4 21 20 19.7 20 18V6M4 6C4 7.7 7.6 9 12 9C16.4 9 20 7.7 20 6M4 12C4 13.7 7.6 15 12 15C16.4 15 20 13.7 20 12" stroke="#00758F" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M12 9V21" stroke="#F29111" stroke-width="1.5" stroke-dasharray="2 2"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="78">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">78%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">MySQL Database</h3>
+              <span class="skill-cat-tag">Backend</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="78"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="78">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ==================== CMS & WEBSITE MANAGEMENT ==================== -->
+          <!-- WordPress -->
+          <div class="skill-card" data-category="cms">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-wp">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="#21759B" stroke-width="1.8" fill="#21759B" fill-opacity="0.15"/>
+                  <path d="M4.5 12C4.5 15.2 6.5 17.9 9.3 19L5.8 9.5C5 10.2 4.5 11.1 4.5 12ZM15.5 11.8C15.5 10.3 14.9 9.5 14.2 8.5C13.5 7.5 13 6.8 13 5.8C13 4.8 13.8 4 14.8 4C14.9 4 15 4 15.1 4C14.2 3.4 13.1 3 12 3C9.8 3 7.9 4 6.6 5.6C6.8 5.6 7 5.7 7.2 5.7C8.1 5.7 8.1 4.8 8.1 4.8C8.1 4.8 7.3 4.8 7.3 4.8C7.3 4.8 6.5 4.8 6.5 4.8C6.5 4.8 6.5 4.8 6.5 4.8L8.6 11L10.5 5.8C10.1 5.8 9.8 5.8 9.8 5.8L12.5 5.8C12.5 5.8 12.2 5.8 11.8 5.8L13.7 11.4L15.2 6.8C14.8 6.8 14.5 6.8 14.5 6.8L15.5 11.8Z" stroke="#21759B" stroke-width="1.2" fill="#21759B"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-advanced">Advanced</span>
+                <div class="circular-progress" data-level="88">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">88%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">WordPress CMS</h3>
+              <span class="skill-cat-tag">CMS & Web</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="88"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="88">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Theme Customization -->
+          <div class="skill-card" data-category="cms">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-theme">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 21A9 9 0 1 0 12 3A9 9 0 0 0 12 21Z" stroke="#8B5CF6" stroke-width="1.8" fill="#8B5CF6" fill-opacity="0.15"/>
+                  <circle cx="7.5" cy="10.5" r="1.5" fill="#EC4899"/>
+                  <circle cx="12" cy="7.5" r="1.5" fill="#3B82F6"/>
+                  <circle cx="16.5" cy="10.5" r="1.5" fill="#10B981"/>
+                  <circle cx="15.5" cy="15.5" r="1.5" fill="#F59E0B"/>
+                  <path d="M8 16C9 14.5 10.5 14 12 14C13.5 14 14.5 15.5 14.5 15.5" stroke="#8B5CF6" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="85">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">85%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Theme Customization</h3>
+              <span class="skill-cat-tag">CMS & Web</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="85"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="85">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plugin Configuration -->
+          <div class="skill-card" data-category="cms">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-plugin">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="#F59E0B" stroke-width="1.8" stroke-linecap="round"/>
+                  <circle cx="12" cy="12" r="4" stroke="#F59E0B" stroke-width="1.8" fill="#F59E0B" fill-opacity="0.2"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="82">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">82%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Plugin Configuration</h3>
+              <span class="skill-cat-tag">CMS & Web</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="82"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="82">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ==================== UI/UX & DESIGN ==================== -->
+          <!-- Adobe XD -->
+          <div class="skill-card" data-category="design">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-xd">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#470137" stroke="#FF61F6" stroke-width="1.8"/>
+                  <text x="6" y="16.5" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#FF61F6">Xd</text>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="80">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">80%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Adobe XD</h3>
+              <span class="skill-cat-tag">UI/UX & Design</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="80"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="80">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photoshop -->
+          <div class="skill-card" data-category="design">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-ps">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="3" width="18" height="18" rx="4" fill="#001E36" stroke="#31A8FF" stroke-width="1.8"/>
+                  <text x="6" y="16.5" font-family="Arial, sans-serif" font-weight="bold" font-size="11" fill="#31A8FF">Ps</text>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="82">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">82%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Adobe Photoshop</h3>
+              <span class="skill-cat-tag">UI/UX & Design</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="82"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="82">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- ==================== DEVELOPMENT TOOLS ==================== -->
+          <!-- Visual Studio Code -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-vscode">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M17.5 2.5L21.5 4.5V19.5L17.5 21.5L8.5 13.8L4 17L2.5 15.5L6.5 12L2.5 8.5L4 7L8.5 10.2L17.5 2.5Z" fill="#007ACC" fill-opacity="0.2" stroke="#007ACC" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M17.5 2.5L21.5 4.5V19.5L17.5 21.5L8.5 13.8L17.5 2.5Z" fill="#007ACC"/>
+                  <path d="M17.5 7.5L11.5 12L17.5 16.5V7.5Z" fill="#3399FF"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-expert">Expert</span>
+                <div class="circular-progress" data-level="95">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">95%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Visual Studio Code</h3>
+              <span class="skill-cat-tag">Dev Tools</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="95"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="95">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Git & GitHub -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-git">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M21 11.5L12.5 3C12.2 2.7 11.8 2.7 11.5 3L3 11.5C2.7 11.8 2.7 12.2 3 12.5L11.5 21C11.8 21.3 12.2 21.3 12.5 21L21 12.5C21.3 12.2 21.3 11.8 21 11.5Z" stroke="#F05032" stroke-width="1.8" fill="#F05032" fill-opacity="0.15"/>
+                  <circle cx="12" cy="8" r="1.5" fill="#F05032"/>
+                  <circle cx="9" cy="15" r="1.5" fill="#F05032"/>
+                  <circle cx="15" cy="15" r="1.5" fill="#F05032"/>
+                  <path d="M12 9.5V12M12 12L9.5 13.5M12 12L14.5 13.5" stroke="#F05032" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-proficient">Proficient</span>
+                <div class="circular-progress" data-level="85">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">85%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Git & GitHub</h3>
+              <span class="skill-cat-tag">Dev Tools</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="85"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="85">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chrome DevTools -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-devtools">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <circle cx="12" cy="12" r="9" stroke="#4285F4" stroke-width="1.8" fill="#4285F4" fill-opacity="0.12"/>
+                  <polyline points="8 10 5 12 8 14" stroke="#EA4335" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="16 10 19 12 16 14" stroke="#34A853" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="13" y1="9" x2="11" y2="15" stroke="#FBBC05" stroke-width="1.8" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-advanced">Advanced</span>
+                <div class="circular-progress" data-level="90">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">90%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Chrome DevTools</h3>
+              <span class="skill-cat-tag">Dev Tools</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="90"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="90">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Netlify -->
+          <div class="skill-card" data-category="tools">
+            <div class="skill-card-glass-glow"></div>
+            <div class="skill-card-header">
+              <div class="skill-icon-wrap icon-netlify">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 2L2 12L12 22L22 12L12 2Z" stroke="#00C7B7" stroke-width="1.8" fill="#00C7B7" fill-opacity="0.15"/>
+                  <path d="M12 6L6 12L12 18L18 12L12 6Z" fill="#00C7B7" fill-opacity="0.4"/>
+                  <circle cx="12" cy="12" r="2" fill="#00C7B7"/>
+                </svg>
+              </div>
+              <div class="skill-header-meta">
+                <span class="skill-level-badge badge-advanced">Advanced</span>
+                <div class="circular-progress" data-level="88">
+                  <svg class="progress-ring" width="46" height="46" viewBox="0 0 46 46">
+                    <circle class="progress-ring-bg" cx="23" cy="23" r="18" />
+                    <circle class="progress-ring-circle" cx="23" cy="23" r="18" />
+                  </svg>
+                  <span class="circle-percent-val">88%</span>
+                </div>
+              </div>
+            </div>
+            <div class="skill-card-body">
+              <h3 class="skill-name">Netlify & Web Hosting</h3>
+              <span class="skill-cat-tag">Dev Tools</span>
+            </div>
+            <div class="skill-card-footer">
+              <div class="skill-bar-container">
+                <div class="skill-bar-fill" data-level="88"></div>
+              </div>
+              <div class="skill-meta-footer">
+                <span class="skill-status">Proficiency Level</span>
+                <span class="skill-percent-text"><span class="counter-num-skill" data-target="88">0</span>%</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     EXPERIENCE SECTION
+     ========================================================================== -->
+  <section id="experience" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          Career Path
+        </div>
+        <h2 class="section-title">Experience & <span class="gradient-text">Journey</span></h2>
+        <p class="section-subtitle">My professional evolution, internships, and continuous learning achievements.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 1: Internship -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Recent Internship</span>
+            <h3 class="timeline-role">Web Development Intern</h3>
+            <div class="timeline-company">IT & Software Solutions</div>
+            <p class="timeline-desc">
+              Successfully completed an intensive Web Development Internship. Developed real-world client landing pages, improved web site performance, collaborated on UI component design, and mastered responsive HTML/CSS/JS workflows.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2: Skill Expansion -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Ongoing 2026</span>
+            <h3 class="timeline-role">Full Stack Transition (Python & Django)</h3>
+            <div class="timeline-company">Self-Driven Learning & Projects</div>
+            <p class="timeline-desc">
+              Expanding technical scope beyond frontend into full-stack application development. Mastering Python syntax, Django MVT architecture, RESTful endpoints, and database integrations.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3: Freelance & Projects -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-date">Continuous</span>
+            <h3 class="timeline-role">Freelance Developer & Project Creator</h3>
+            <div class="timeline-company">Independent Practice</div>
+            <p class="timeline-desc">
+              Designing and launching bespoke websites for small businesses, salons, eCommerce stores, and event conferences. Focus on fast load times, clean aesthetic appeal, and intuitive UI layout.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     PROJECTS SECTION
+     ========================================================================== -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          Selected Works
+        </div>
+        <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle">Real-world applications built with clean code and modern web standards.</p>
+      </div>
+
+      <!-- Project Filters -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="web">Web Apps</button>
+        <button class="filter-btn" data-filter="business">Business</button>
+        <button class="filter-btn" data-filter="ecommerce">eCommerce</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        <!-- Project 1: Portfolio -->
+        <div class="project-card" data-category="web">
+          <div class="project-img-wrapper">
+            <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="250" fill="#0F172A"/>
+              <rect x="20" y="20" width="360" height="210" rx="10" fill="#1E293B"/>
+              <circle cx="40" cy="38" r="5" fill="#EF4444"/>
+              <circle cx="55" cy="38" r="5" fill="#F59E0B"/>
+              <circle cx="70" cy="38" r="5" fill="#22C55E"/>
+              <text x="50" y="90" font-family="sans-serif" font-weight="bold" font-size="20" fill="#38BDF8">Gopal Kumar Portfolio</text>
+              <rect x="50" y="110" width="200" height="12" rx="6" fill="#2563EB"/>
+              <rect x="50" y="132" width="140" height="10" rx="5" fill="#64748B"/>
+              <rect x="50" y="160" width="100" height="30" rx="8" fill="#38BDF8"/>
+            </svg>
+            <div class="project-overlay">
+              <a href="#" class="project-overlay-btn view-project-details" data-project="portfolio" aria-label="View Details">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Web Application</span>
+            <h3 class="project-title">Personal Developer Portfolio</h3>
+            <p class="project-description">A world-class, responsive personal portfolio with glassmorphism, glowing dark theme, interactive canvas particles, and smooth animations.</p>
+            <div class="project-tags">
+              <span class="tag-badge">HTML5</span>
+              <span class="tag-badge">CSS3</span>
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">Canvas</span>
+            </div>
+            <div class="project-footer-links">
+              <a href="#" class="project-link-btn view-project-details" data-project="portfolio">Details &rarr;</a>
+              <a href="https://github.com/gopalkumahto3" target="_blank" class="project-link-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Salon Website -->
+        <div class="project-card" data-category="business">
+          <div class="project-img-wrapper">
+            <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="250" fill="#18181B"/>
+              <rect x="20" y="20" width="360" height="210" rx="10" fill="#27272A"/>
+              <circle cx="200" cy="90" r="35" fill="#E4A853" opacity="0.4"/>
+              <text x="200" y="150" font-family="serif" font-weight="bold" font-size="22" fill="#F4E8C1" text-anchor="middle">Luxe Salon & Spa</text>
+              <rect x="130" y="170" width="140" height="26" rx="13" fill="#E4A853"/>
+            </svg>
+            <div class="project-overlay">
+              <a href="#" class="project-overlay-btn view-project-details" data-project="salon" aria-label="View Details">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Business Website</span>
+            <h3 class="project-title">Salon Demo Website</h3>
+            <p class="project-description">An elegant, luxury salon and spa website equipped with service catalog showcase, online appointment booking interface, and customer review cards.</p>
+            <div class="project-tags">
+              <span class="tag-badge">HTML5</span>
+              <span class="tag-badge">CSS3</span>
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">Booking UI</span>
+            </div>
+            <div class="project-footer-links">
+              <a href="#" class="project-link-btn view-project-details" data-project="salon">Details &rarr;</a>
+              <a href="https://github.com/gopalkumahto3" target="_blank" class="project-link-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Fashion eCommerce -->
+        <div class="project-card" data-category="ecommerce">
+          <div class="project-img-wrapper">
+            <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="250" fill="#020617"/>
+              <rect x="30" y="40" width="100" height="150" rx="8" fill="#1E293B"/>
+              <rect x="150" y="40" width="100" height="150" rx="8" fill="#1E293B"/>
+              <rect x="270" y="40" width="100" height="150" rx="8" fill="#1E293B"/>
+              <circle cx="80" cy="90" r="25" fill="#38BDF8"/>
+              <circle cx="200" cy="90" r="25" fill="#2563EB"/>
+              <circle cx="320" cy="90" r="25" fill="#22C55E"/>
+            </svg>
+            <div class="project-overlay">
+              <a href="#" class="project-overlay-btn view-project-details" data-project="fashion" aria-label="View Details">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">eCommerce UI</span>
+            <h3 class="project-title">Fashion eCommerce Website</h3>
+            <p class="project-description">A stylish online clothing storefront featuring responsive product grids, dynamic cart drawer, category filters, and checkout UI mockup.</p>
+            <div class="project-tags">
+              <span class="tag-badge">HTML5</span>
+              <span class="tag-badge">CSS3</span>
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">Cart Drawer</span>
+            </div>
+            <div class="project-footer-links">
+              <a href="#" class="project-link-btn view-project-details" data-project="fashion">Details &rarr;</a>
+              <a href="https://github.com/gopalkumahto3" target="_blank" class="project-link-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: Marketing Conference -->
+        <div class="project-card" data-category="business">
+          <div class="project-img-wrapper">
+            <svg viewBox="0 0 400 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="400" height="250" fill="#311B92"/>
+              <text x="200" y="100" font-family="sans-serif" font-weight="900" font-size="26" fill="#00E676" text-anchor="middle">TECH SUMMIT 2026</text>
+              <rect x="100" y="130" width="200" height="40" rx="8" fill="#FF4081"/>
+              <text x="200" y="155" font-family="sans-serif" font-weight="bold" font-size="14" fill="#FFFFFF" text-anchor="middle">REGISTER NOW</text>
+            </svg>
+            <div class="project-overlay">
+              <a href="#" class="project-overlay-btn view-project-details" data-project="marketing" aria-label="View Details">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+              </a>
+            </div>
+          </div>
+          <div class="project-body">
+            <span class="project-category">Landing Page</span>
+            <h3 class="project-title">Marketing Conference Page</h3>
+            <p class="project-description">A high-conversion marketing event landing page with live countdown timer, speaker profile grid, ticket pricing, and schedule agenda.</p>
+            <div class="project-tags">
+              <span class="tag-badge">HTML5</span>
+              <span class="tag-badge">CSS3</span>
+              <span class="tag-badge">JavaScript</span>
+              <span class="tag-badge">Countdown</span>
+            </div>
+            <div class="project-footer-links">
+              <a href="#" class="project-link-btn view-project-details" data-project="marketing">Details &rarr;</a>
+              <a href="https://github.com/gopalkumahto3" target="_blank" class="project-link-btn">GitHub</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     SERVICES SECTION
+     ========================================================================== -->
+  <section id="services" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          What I Offer
+        </div>
+        <h2 class="section-title">Professional <span class="gradient-text">Web Services</span></h2>
+        <p class="section-subtitle">Tailored digital solutions to elevate your brand and drive business growth.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1 -->
+        <div class="service-card">
+          <div class="service-icon">&lt;/&gt;</div>
+          <h3 class="service-title">Frontend Development</h3>
+          <p class="service-desc">Building clean, modular, and maintainable client-side code using modern HTML5, CSS3, and ES6+ JavaScript standards.</p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card">
+          <div class="service-icon">📱</div>
+          <h3 class="service-title">Responsive Websites</h3>
+          <p class="service-desc">Ensuring flawless display and seamless user experience across all screen sizes: desktop, laptop, tablet, and mobile devices.</p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card">
+          <div class="service-icon">🚀</div>
+          <h3 class="service-title">Landing Pages</h3>
+          <p class="service-desc">High-conversion marketing landing pages crafted to capture leads, showcase products, and promote business events.</p>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h3 class="service-title">Portfolio Websites</h3>
+          <p class="service-desc">Personal branded portfolios designed specifically for freelancers, developers, creatives, and agency professionals.</p>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon">🏢</div>
+          <h3 class="service-title">Business Websites</h3>
+          <p class="service-desc">Professional corporate sites equipped with service menus, contact forms, location maps, and brand storytelling.</p>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card">
+          <div class="service-icon">✨</div>
+          <h3 class="service-title">Website Redesign & UI Refresh</h3>
+          <p class="service-desc">Transforming outdated web layouts into sleek, modern, futuristic, and mobile-optimized web interfaces.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     WHY HIRE ME SECTION
+     ========================================================================== -->
+  <section id="why-hire-me" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          Value Proposition
+        </div>
+        <h2 class="section-title">Why Choose To <span class="gradient-text">Hire Me</span></h2>
+        <p class="section-subtitle">Core principles that guide my engineering and client collaboration process.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon-box">🎨</div>
+          <h3 class="why-title">Modern UI Design</h3>
+          <p class="why-desc">Crafting eye-catching layouts inspired by Apple, Stripe, and Linear design principles.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">📱</div>
+          <h3 class="why-title">Responsive Development</h3>
+          <p class="why-desc">Flawless pixel-perfect rendering across mobile phones, tablets, and ultra-wide screens.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">⚡</div>
+          <h3 class="why-title">Clean Code & Performance</h3>
+          <p class="why-desc">Well-structured, semantic, and lightweight code optimized for instant loading speeds.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">🔍</div>
+          <h3 class="why-title">SEO Friendly</h3>
+          <p class="why-desc">Structured semantic metadata and fast loading metrics for search engine ranking.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">💬</div>
+          <h3 class="why-title">Easy Communication</h3>
+          <p class="why-desc">Transparent progress updates, active listening, and smooth collaboration during projects.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon-box">🧠</div>
+          <h3 class="why-title">Problem Solving</h3>
+          <p class="why-desc">Dedicated to debugging complex layouts and finding clean technical solutions efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     STATISTICS SECTION
+     ========================================================================== -->
+  <section class="stats-section reveal">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter-num" data-target="15">0</span>+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter-num" data-target="10">0</span>+</div>
+          <div class="stat-label">Happy Clients</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter-num" data-target="1200">0</span>+</div>
+          <div class="stat-label">Hours Coding</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number"><span class="counter-num" data-target="8">0</span>+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     TESTIMONIALS SECTION
+     ========================================================================== -->
+  <section class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Client Feedback
+        </div>
+        <h2 class="section-title">What People <span class="gradient-text">Say</span></h2>
+        <p class="section-subtitle">Endorsements from internship mentors and freelance project clients.</p>
+      </div>
+
+      <div class="testimonials-slider">
+        <div class="testimonials-track">
+          <!-- Card 1 -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote-text">
+              "Gopal built our company landing page with incredible attention to detail. His understanding of responsive CSS layout and clean JavaScript animations exceeded our expectations!"
+            </p>
+            <div class="client-info">
+              <div class="client-avatar">RS</div>
+              <div class="client-details">
+                <div class="client-name">Rahul Sharma</div>
+                <div class="client-role">Startup Founder & Tech Director</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote-text">
+              "During his Web Development Internship, Gopal showed exceptional discipline, fast learning, and a natural eye for user-centered design. He delivers on time without compromise."
+            </p>
+            <div class="client-info">
+              <div class="client-avatar">PM</div>
+              <div class="client-details">
+                <div class="client-name">Priya Mehta</div>
+                <div class="client-role">Internship Mentor & Lead Engineer</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote-text">
+              "Gopal created our salon demo website with an elegant design and appointment UI. Our clients love the sleek look and fast loading speed."
+            </p>
+            <div class="client-info">
+              <div class="client-avatar">AK</div>
+              <div class="client-details">
+                <div class="client-name">Amit Kumar</div>
+                <div class="client-role">Business Owner</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="slider-controls">
+          <button id="testi-prev" class="slider-btn" aria-label="Previous Testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button id="testi-next" class="slider-btn" aria-label="Next Testimonial">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     CONTACT SECTION
+     ========================================================================== -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get In Touch
+        </div>
+        <h2 class="section-title">Let's Build Something <span class="gradient-text">Amazing</span></h2>
+        <p class="section-subtitle">Have a project idea or job opportunity? Send a message and let's discuss.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-cards">
+          <div class="contact-card" id="copy-email-btn" style="cursor: pointer;">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="contact-card-title">Email Me</div>
+              <div class="contact-card-value">gopalkumahto3@gmail.com</div>
+              <span style="font-size: 0.75rem; color: var(--accent); font-weight: 600;">(Click to copy)</span>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="contact-card-title">Location</div>
+              <div class="contact-card-value">India (Open for Remote & Relocation)</div>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon-box">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="contact-card-title">Availability</div>
+              <div class="contact-card-value">Available for Freelance & Full-time</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrapper">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="contact-name" class="form-label">Your Name</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-email" class="form-label">Your Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="e.g. john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Message</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Tell me about your project or offer..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+     FOOTER
+     ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">Gopal<span>Kumar</span></div>
+        <ul class="footer-nav">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Gopal Kumar. All rights reserved. Crafted with passion and precision.</div>
+        <div>Frontend Web Developer | Growing toward Full Stack</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back To Top Floating Button -->
+  <button class="back-to-top" aria-label="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <!-- Project Details Modal Popup -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Close Modal">&times;</button>
+      <span id="modal-category" class="project-category">Category</span>
+      <h2 id="modal-title" style="font-family: var(--font-heading); margin-bottom: 1rem;">Project Title</h2>
+      <p id="modal-desc" style="color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem;">Project details description.</p>
+      
+      <div style="margin-bottom: 2rem;">
+        <h4 style="font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Technologies Used:</h4>
+        <div id="modal-techs" class="project-tags"></div>
+      </div>
+
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <a id="modal-live" href="#" target="_blank" class="btn-primary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          Live Preview
+        </a>
+        <a id="modal-github" href="#" target="_blank" class="btn-secondary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+          GitHub Code
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div id="toast-container"></div>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Main JavaScript File -->
+  <script src="/script.js"></script>
+</body>
+</html>
