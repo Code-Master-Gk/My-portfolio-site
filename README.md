@@ -17,7 +17,9 @@ portfolio/
 │   ├── images/             # Profile & personal photos
 │   ├── icons/              # Favicon and UI icons
 │   │   └── favicon.svg     # SVG logo favicon
-│   └── projects/           # Screenshots & thumbnails for portfolio projects
+│   ├── projects/           # Screenshots & thumbnails for portfolio projects
+│   └── resume/             # PDF resumes for direct download
+│       └── Gopal-Kumar-Resume.pdf
 │
 ├── css/
 │   └── style.css           # Complete responsive stylesheet

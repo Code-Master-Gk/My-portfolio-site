@@ -692,16 +692,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Resume Download Notification
   const downloadBtns = document.querySelectorAll('.download-resume-btn');
   downloadBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      e.preventDefault();
-      showToast('Downloading Gopal Kumar Resume (PDF)...');
-      setTimeout(() => {
-        // Mock download trigger
-        const link = document.createElement('a');
-        link.href = '#';
-        link.download = 'Gopal_Kumar_Resume.pdf';
-        link.click();
-      }, 800);
+    btn.addEventListener('click', () => {
+      showToast('Downloading Gopal-Kumar-Resume.pdf...');
     });
   });
 
