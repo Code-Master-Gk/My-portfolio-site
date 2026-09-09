@@ -1058,10 +1058,18 @@ body.cursor-hover .cursor-blur {
 /* --------------------------------------------------------------------------
    8. SKILLS SECTION
    -------------------------------------------------------------------------- */
+.skills-section {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .skills-container {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .skills-filter {
@@ -2567,6 +2575,50 @@ body.cursor-hover .cursor-blur {
     transform: translateX(20px);
   }
 
+  /* Skills Section Mobile Visibility & Responsive Layout (768px and below) */
+  .skills-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: none !important;
+    position: relative !important;
+    z-index: 2 !important;
+    height: auto !important;
+    min-height: auto !important;
+    overflow: visible !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .skills-section.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+
+  .skills-container {
+    width: 100% !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem !important;
+  }
+
+  .skills-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  .skill-card {
+    display: flex !important;
+    visibility: visible !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+
   /* Contact Section */
   .contact-grid {
     grid-template-columns: 1fr;
@@ -2589,8 +2641,76 @@ body.cursor-hover .cursor-blur {
     padding: 0 0.75rem;
   }
 
+  .skills-container {
+    gap: 1.5rem !important;
+  }
+
   .skills-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
+    gap: 1.15rem !important;
+  }
+
+  .skill-card {
+    padding: 1.35rem 1.15rem !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .skill-icon-wrap {
+    width: 48px !important;
+    height: 48px !important;
+    min-width: 48px !important;
+    border-radius: 12px !important;
+  }
+
+  .skill-icon-wrap svg {
+    width: 26px !important;
+    height: 26px !important;
+  }
+
+  .skill-header-meta {
+    gap: 0.5rem !important;
+  }
+
+  .skill-level-badge {
+    font-size: 0.68rem !important;
+    padding: 0.2rem 0.55rem !important;
+  }
+
+  .circular-progress {
+    width: 42px !important;
+    height: 42px !important;
+    min-width: 42px !important;
+  }
+
+  .progress-ring {
+    width: 42px !important;
+    height: 42px !important;
+  }
+
+  .circle-percent-val {
+    font-size: 0.68rem !important;
+  }
+
+  .skill-name {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .skill-cat-tag {
+    font-size: 0.72rem !important;
+  }
+
+  .skill-bar-container {
+    height: 6px !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .skill-status {
+    font-size: 0.76rem !important;
+  }
+
+  .skill-percent-text {
+    font-size: 0.85rem !important;
   }
 
   .why-grid {
@@ -2672,6 +2792,27 @@ body.cursor-hover .cursor-blur {
 
 /* Mobile (480px) */
 @media (max-width: 480px) {
+  .skills-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .skill-card {
+    padding: 1.2rem 1rem !important;
+  }
+
+  .skill-icon-wrap {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    border-radius: 10px !important;
+  }
+
+  .skill-icon-wrap svg {
+    width: 24px !important;
+    height: 24px !important;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -2710,12 +2851,25 @@ body.cursor-hover .cursor-blur {
   }
 
   .skills-filter, .projects-filter {
-    gap: 0.5rem;
+    gap: 0.45rem;
   }
 
   .filter-btn {
-    padding: 0.5rem 0.9rem;
-    font-size: 0.8rem;
+    padding: 0.45rem 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .skill-card {
+    padding: 1.1rem 0.85rem !important;
+  }
+
+  .skill-header-meta {
+    gap: 0.35rem !important;
+  }
+
+  .skill-level-badge {
+    font-size: 0.65rem !important;
+    padding: 0.18rem 0.45rem !important;
   }
 
   .floating-badge {
@@ -2749,6 +2903,54 @@ body.cursor-hover .cursor-blur {
   .container {
     width: 95%;
     padding: 0 0.5rem;
+  }
+
+  .skills-filter {
+    gap: 0.35rem;
+  }
+
+  .filter-btn {
+    padding: 0.4rem 0.65rem;
+    font-size: 0.74rem;
+  }
+
+  .skill-card {
+    padding: 0.95rem 0.75rem !important;
+  }
+
+  .skill-card-header {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  .skill-icon-wrap {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px !important;
+  }
+
+  .skill-icon-wrap svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  .circular-progress {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+
+  .progress-ring {
+    width: 38px !important;
+    height: 38px !important;
+  }
+
+  .circle-percent-val {
+    font-size: 0.65rem !important;
+  }
+
+  .skill-name {
+    font-size: 0.98rem !important;
   }
 
   .logo-text {

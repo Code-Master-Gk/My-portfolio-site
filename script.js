@@ -341,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skillFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+      triggerSkillBars(); // Ensure skill bars are filled when user interacts with filters
       skillFilterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -698,7 +699,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (entry.isIntersecting || entry.intersectionRatio > 0) {
           entry.target.classList.add('active');
 
           // Trigger skill bars when skill section is visible
@@ -713,9 +714,26 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.02, rootMargin: '0px 0px -10px 0px' });
 
     revealElements.forEach(el => revealObserver.observe(el));
+
+    // Fallback visibility check for mobile devices, tall sections, and rapid scrolls
+    function checkSkillsVisibility() {
+      const skillsSec = document.getElementById('skills');
+      if (!skillsSec) return;
+      const rect = skillsSec.getBoundingClientRect();
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        skillsSec.classList.add('active');
+        triggerSkillBars();
+      }
+    }
+
+    window.addEventListener('scroll', checkSkillsVisibility, { passive: true });
+    window.addEventListener('resize', checkSkillsVisibility, { passive: true });
+    setTimeout(checkSkillsVisibility, 150);
+    setTimeout(checkSkillsVisibility, 600);
   }
 
 
