@@ -341,7 +341,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skillFilterBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-      triggerSkillBars(); // Ensure skill bars are filled when user interacts with filters
       skillFilterBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
@@ -350,26 +349,23 @@ document.addEventListener('DOMContentLoaded', () => {
       skillCards.forEach(card => {
         const matches = filterValue === 'all' || card.getAttribute('data-category') === filterValue;
         if (matches) {
+          card.classList.remove('is-hidden');
           card.style.display = 'flex';
-          card.style.opacity = '0';
-          card.style.transform = 'translateY(10px)';
-          requestAnimationFrame(() => {
-            card.style.transition = 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)';
-            card.style.opacity = '1';
-            card.style.transform = 'translateY(0)';
-          });
+          card.style.opacity = '1';
+          card.style.visibility = 'visible';
+          card.style.transform = 'none';
         } else {
+          card.classList.add('is-hidden');
           card.style.display = 'none';
         }
       });
+
+      triggerSkillBars(false); // Ensure skill bars remain filled when user interacts with filters
     });
   });
 
   let skillsAnimated = false;
-  function triggerSkillBars() {
-    if (skillsAnimated) return;
-    skillsAnimated = true;
-
+  function triggerSkillBars(runCounterAnimation = true) {
     // Linear Progress Bars
     const skillBars = document.querySelectorAll('.skill-bar-fill');
     skillBars.forEach(bar => {
@@ -387,7 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (ring) {
         const circumference = 113.1;
         const offset = circumference - (level / 100) * circumference;
-        ring.style.strokeDashoffset = offset;
+        ring.style.strokeDashoffset = `${offset.toFixed(2)}px`;
       }
     });
 
@@ -395,23 +391,42 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillCounters = document.querySelectorAll('.counter-num-skill');
     skillCounters.forEach(counter => {
       const target = parseInt(counter.getAttribute('data-target') || '0', 10);
-      let current = 0;
-      const duration = 1200;
-      const stepTime = 16;
-      const steps = duration / stepTime;
-      const increment = target / steps;
+      if (!target) return;
 
-      const updateCounter = () => {
-        current += increment;
-        if (current < target) {
-          counter.textContent = Math.ceil(current);
-          requestAnimationFrame(updateCounter);
+      if (!runCounterAnimation || skillsAnimated) {
+        counter.textContent = target;
+        return;
+      }
+
+      // Smooth count-up animation
+      let startTimestamp = null;
+      const duration = 1100;
+      let frameId = null;
+
+      // Fail-safe timer so counter NEVER stays at 0 even if rAF is throttled by mobile browser
+      const safetyTimer = setTimeout(() => {
+        counter.textContent = target;
+        if (frameId) cancelAnimationFrame(frameId);
+      }, duration + 150);
+
+      const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const elapsed = timestamp - startTimestamp;
+        const progress = Math.min(elapsed / duration, 1);
+        const easeOut = 1 - Math.pow(1 - progress, 3);
+        counter.textContent = Math.round(easeOut * target);
+
+        if (progress < 1) {
+          frameId = requestAnimationFrame(step);
         } else {
           counter.textContent = target;
+          clearTimeout(safetyTimer);
         }
       };
-      updateCounter();
+      frameId = requestAnimationFrame(step);
     });
+
+    skillsAnimated = true;
   }
 
 
@@ -703,8 +718,8 @@ document.addEventListener('DOMContentLoaded', () => {
           entry.target.classList.add('active');
 
           // Trigger skill bars when skill section is visible
-          if (entry.target.classList.contains('skills-section')) {
-            triggerSkillBars();
+          if (entry.target.classList.contains('skills-section') || entry.target.id === 'skills') {
+            triggerSkillBars(true);
           }
 
           // Trigger counters when stats section is visible
@@ -714,27 +729,38 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
-    }, { threshold: 0.02, rootMargin: '0px 0px -10px 0px' });
+    }, { threshold: 0.01, rootMargin: '100px 0px 100px 0px' });
 
     revealElements.forEach(el => revealObserver.observe(el));
 
-    // Fallback visibility check for mobile devices, tall sections, and rapid scrolls
-    function checkSkillsVisibility() {
-      const skillsSec = document.getElementById('skills');
-      if (!skillsSec) return;
-      const rect = skillsSec.getBoundingClientRect();
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      if (rect.top < windowHeight && rect.bottom > 0) {
-        skillsSec.classList.add('active');
-        triggerSkillBars();
-      }
+    // Also observe skills section directly
+    const skillsSec = document.getElementById('skills');
+    if (skillsSec) {
+      revealObserver.observe(skillsSec);
+      checkSkillsVisibility();
     }
-
-    window.addEventListener('scroll', checkSkillsVisibility, { passive: true });
-    window.addEventListener('resize', checkSkillsVisibility, { passive: true });
-    setTimeout(checkSkillsVisibility, 150);
-    setTimeout(checkSkillsVisibility, 600);
   }
+
+  // Robust visibility check for mobile devices, tall sections, and rapid scrolls
+  function checkSkillsVisibility() {
+    const skillsSec = document.getElementById('skills');
+    if (!skillsSec) return;
+    const rect = skillsSec.getBoundingClientRect();
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+    if (rect.top < windowHeight + 150 && rect.bottom > -150) {
+      skillsSec.classList.add('active');
+      triggerSkillBars(true);
+    }
+  }
+
+  // Listen for scroll, touchmove, and resize immediately (works before or after preloader)
+  window.addEventListener('scroll', checkSkillsVisibility, { passive: true });
+  window.addEventListener('touchmove', checkSkillsVisibility, { passive: true });
+  window.addEventListener('resize', checkSkillsVisibility, { passive: true });
+  // Initial checks
+  setTimeout(checkSkillsVisibility, 100);
+  setTimeout(checkSkillsVisibility, 400);
+  setTimeout(checkSkillsVisibility, 1000);
 
 
   /* ------------------------------------------------------------------------

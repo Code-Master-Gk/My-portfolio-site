@@ -1062,6 +1062,22 @@ body.cursor-hover .cursor-blur {
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transform: none !important;
+  height: auto !important;
+  min-height: auto !important;
+  clear: both;
+}
+
+.skills-section.reveal,
+#skills,
+#skills.reveal {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: none !important;
+  display: block !important;
 }
 
 .skills-container {
@@ -1094,6 +1110,7 @@ body.cursor-hover .cursor-blur {
   backdrop-filter: blur(12px);
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .filter-btn svg {
@@ -1122,6 +1139,8 @@ body.cursor-hover .cursor-blur {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.75rem;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Glassmorphism Skill Card */
@@ -1138,6 +1157,13 @@ body.cursor-hover .cursor-blur {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  box-sizing: border-box;
+  opacity: 1;
+  visibility: visible;
+}
+
+.skill-card.is-hidden {
+  display: none !important;
 }
 
 /* Glass Ambient Hover Glow inside card */
@@ -2588,12 +2614,16 @@ body.cursor-hover .cursor-blur {
     overflow: visible !important;
     width: 100% !important;
     box-sizing: border-box !important;
+    clear: both !important;
   }
 
-  .skills-section.reveal {
+  .skills-section.reveal,
+  #skills,
+  #skills.reveal {
     opacity: 1 !important;
     transform: none !important;
     visibility: visible !important;
+    display: block !important;
   }
 
   .skills-container {
@@ -2613,10 +2643,16 @@ body.cursor-hover .cursor-blur {
   }
 
   .skill-card {
-    display: flex !important;
+    display: flex;
     visibility: visible !important;
     box-sizing: border-box !important;
     width: 100% !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .skill-card.is-hidden {
+    display: none !important;
   }
 
   /* Contact Section */
